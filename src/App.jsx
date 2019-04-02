@@ -6,7 +6,6 @@ import React from 'react'
 // TODO: load and display product data from http://localhost:8080/api/products, eg. show product title, price, image
 // TODO: implement a cart, the ability for users to add products to a cart section
 // TODO: implement the ability to increment, decrement and remove items from the cart
-// TODO: implement a loading indicator while products are initially being loaded
 
 class App extends React.Component {
   constructor() {
