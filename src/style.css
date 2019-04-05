@@ -1,3 +1,23 @@
-.hello-world {
-  color: #00baae;
+/* App */
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+/* Products */
+
+ul {
+  list-style-type: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+}
+
+.product_image {
+    width: 100px;
+    height: 100px;
+  }
