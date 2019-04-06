@@ -1,23 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700");
+
 /* App */
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
 .app {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+/* Header Area */
+
+.head-image {
+  background-image: url("../public/assets/sunglasses-for-running.jpg");
+  background-size: cover;
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 0px;
 }
 
 /* Products */
 
+#sunglass-banner {
+  background-color: black;
+  color: white;
+  padding: 1px 0px 1px 100px;
+  width: 100%;
+}
+
 ul {
   list-style-type: none;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul li {
+  margin: 20px;
+  color: #aaaaaa;
 }
 
 .product_image {
-    width: 100px;
-    height: 100px;
-  }
+  width: 380px;
+  height: 380px;
+}
+
+.prod-button {
+  background-color: black;
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 20px 20px 20px 20px;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+/* Cart Area */
+
+#cart-banner {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 73%;
+  margin-top: 50px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 380px;
+  height: 380px;
+}
+
+.cart-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.qty-button {
+  background-color: transparent;
+  border: none;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+}

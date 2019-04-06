@@ -6,9 +6,12 @@ const Cart = props => {
     <ul>
       {props.cart.map((item, index) => (
         <li key={item.data.id}>
-          <CartItem {...item} />
-          <button onClick={() => props.increment(index, item.quantity)}>Increment</button>
-          <button onClick={() => props.decrement(index, item.quantity)}>Decrement</button>
+          <CartItem
+            increment={(index, quantity) => props.increment(index, quantity)}
+            decrement={(index, quantity) => props.decrement(index, quantity)}
+            item={item}
+            index={index}
+          />
         </li>
       ))}
     </ul>

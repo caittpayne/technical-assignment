@@ -33,6 +33,7 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader'
+          
         ]
       },
       {
@@ -40,6 +41,12 @@ module.exports = {
         use: [
           'babel-loader'
         ]
+      },
+      {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: [
+              'file-loader'
+          ]
       }
     ]
   }

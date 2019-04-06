@@ -5,7 +5,7 @@ import Cart from "./Components/Cart";
 
 //  What we're looking for here is baisc insight into your familiarity with the React and Javascript
 // and your general experience at writing code!
-// ** TODO: import axios (if you prefer you can install, import and use a different request library) 
+// ** TODO: import axios (if you prefer you can install, import and use a different request library)
 // ** TODO: load and display product data from http://localhost:8080/api/products, eg. show product title, price, image
 // ** TODO: implement a cart, the ability for users to add products to a cart section
 // ** TODO: implement the ability to increment, decrement and remove items from the cart
@@ -83,19 +83,26 @@ class App extends React.Component {
   render() {
     const { products, cart } = this.state;
     return (
-      <main>
+      <React.Fragment>
         {products !== null ? (
           <main className="app">
-            <section>
-              <p>this is the girl pic</p>
+            <section
+              className="head-image"
+              aria-label="Sunglasses for Running on Woman"
+            />
+            <section id="sunglass-banner">
+              <p>sunglasses</p>
             </section>
-            <section>
+            <section className="container">
               <Product_list
                 products={products}
                 addToCart={item => this.addToCart(item)}
               />
             </section>
-            <section>
+            <section id="cart-banner">
+              <p>cart</p>
+            </section>
+            <section className="container">
               <Cart
                 cart={cart}
                 increment={(index, count) => this.increment(index, count)}
@@ -107,7 +114,7 @@ class App extends React.Component {
         ) : (
           <section />
         )}
-      </main>
+      </React.Fragment>
     );
   }
 }
